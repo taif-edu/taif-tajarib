@@ -491,6 +491,49 @@ footer img{background:#fff;padding:8px 12px;border-radius:14px}
 .spl-start span svg{width:40px;height:40px;margin-left:-4px}
 .spl-start button:hover span{transform:scale(1.08)}
 .spl-start b{font-size:24px;margin-top:14px}.spl-start small{font-size:14px;color:rgba(255,255,255,.7)}
+
+/* ===== share form ===== */
+nav a.nshare{color:#fff!important;background:linear-gradient(135deg,#006770,#004f56);border-radius:999px;padding:7px 16px}
+.shr{display:grid;grid-template-columns:.9fr 1.3fr;gap:0;border-radius:30px;overflow:hidden;border:1px solid var(--line2);background:#fff;box-shadow:0 30px 70px rgba(0,79,86,.12)}
+.shr-a{position:relative;color:#fff;padding:44px 38px;background:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 1px,transparent 1px 34px),repeating-linear-gradient(-45deg,rgba(255,255,255,.035) 0 1px,transparent 1px 34px),radial-gradient(500px 400px at 80% 0%,rgba(42,158,163,.4),transparent 70%),linear-gradient(160deg,#00525a,#003f45 55%,#00262b)}
+.shr-a .k{color:#d9c084;font-weight:700;font-size:14px;letter-spacing:.5px}
+.shr-a h2{font-size:clamp(28px,3vw,38px);line-height:1.4;margin-top:8px;color:#fff}
+.shr-a h2 em{font-style:normal;color:#9fd8d0}
+.shr-a p{font-size:15.5px;line-height:1.9;color:rgba(255,255,255,.8);margin-top:14px}
+.shr-a p b{color:#d9c084}
+.shr-steps{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.shr-steps li{display:flex;align-items:center;gap:12px;font-size:15px}
+.shr-steps i{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;color:#00262b;background:linear-gradient(135deg,#d9c084,#b39350);flex:0 0 auto}
+.shr-q{position:absolute;bottom:30px;right:38px;font-size:18px;font-weight:700;color:rgba(255,255,255,.85)}.shr-q em{font-style:normal;color:#d9c084}
+.shr-f{position:relative;padding:36px 36px 30px;display:grid;gap:16px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:grid;gap:7px}
+.fld>span{font-size:13.5px;font-weight:600;color:var(--ink)}.fld>span b{color:#c0392b}
+.fld input,.fld textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);border:1.5px solid var(--line2);border-radius:14px;padding:12px 14px;background:#fbfdfd;outline:none;transition:.2s;resize:vertical}
+.fld input:focus,.fld textarea:focus{border-color:#006770;background:#fff;box-shadow:0 0 0 4px rgba(0,103,112,.1)}
+.fld.bad input,.fld.bad textarea{border-color:#c0392b;box-shadow:0 0 0 4px rgba(192,57,43,.08)}
+.fld .cnt{justify-self:end;font-size:11.5px;color:var(--mut);margin-top:-2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:inherit;font-size:13px;border:1.5px solid var(--line2);background:#fff;color:var(--mut);border-radius:999px;padding:7px 14px;cursor:pointer;transition:.2s}
+.chips button:hover{border-color:#006770;color:#006770}
+.chips button.on{background:#006770;border-color:#006770;color:#fff}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+.ok{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--mut);cursor:pointer}
+.ok input{width:18px;height:18px;accent-color:#006770;margin-top:3px;flex:0 0 auto}
+.ok.bad span{color:#c0392b}
+.err{min-height:0;font-size:13.5px;color:#c0392b}.err:empty{display:none}
+.shr-btn{justify-self:start;min-width:200px;justify-content:center;position:relative}
+.shr-btn .sp{display:none;width:18px;height:18px;border-radius:50%;border:2.5px solid rgba(0,38,43,.3);border-top-color:#00262b;animation:spin .8s linear infinite}
+.shr-btn.busy .t{opacity:.6}.shr-btn.busy .sp{display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.shr-done{position:absolute;inset:0;background:#fff;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:30px}
+.shr-f.sent .shr-done{display:flex;animation:fade .4s}
+.shr-done b{font-size:24px;color:var(--ink)}.shr-done p{color:var(--mut)}
+.shr-done .ck svg{width:86px;height:86px;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.shr-done .ck circle{stroke:#b39350;stroke-width:3;stroke-dasharray:151;stroke-dashoffset:151;animation:ckd .7s forwards}
+.shr-done .ck path{stroke:#006770;stroke-width:4;stroke-dasharray:40;stroke-dashoffset:40;animation:ckd .5s .6s forwards}
+@keyframes ckd{to{stroke-dashoffset:0}}
+@media(max-width:900px){.shr{grid-template-columns:1fr}.shr-a{padding:34px 26px 80px}.shr-f{padding:26px 20px}.row2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -498,7 +541,7 @@ footer img{background:#fff;padding:8px 12px;border-radius:14px}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top"><img class="lg" src="assets/moe-logo.png" alt="وزارة التعليم"><span class="sep"></span><span><b>تجارب مميزة من مدارسنا</b><small>الإدارة العامة للتعليم بمحافظة الطائف</small></span></a>
-    <nav><a href="#top" class="on">الرئيسية</a><a href="#bank">بنك التجارب</a><a href="#meetings">سجل اللقاءات</a></nav>
+    <nav><a href="#top" class="on">الرئيسية</a><a href="#bank">بنك التجارب</a><a href="#meetings">سجل اللقاءات</a><a href="#share" class="nshare">شارك تجربتك</a></nav>
   </div>
 </header>
 <main>
@@ -551,6 +594,37 @@ footer img{background:#fff;padding:8px 12px;border-radius:14px}
     <div class="sh rv"><div><div class="k">سجل اللقاءات</div><h2>رحلة اللقاءات <em>عبر الفترات</em></h2></div>
       <p>لقاءات افتراضية عبر منصة Webex. اضغط على الدعوة لتكبيرها، أو على اسم التجربة لفتحها.</p></div>
     <div class="periods" id="tl"></div>
+  </div>
+</section>
+<section class="blk" id="share">
+  <div class="wrap">
+    <div class="shr rv">
+      <aside class="shr-a">
+        <div class="k">شارك تجربتك</div>
+        <h2>لدى مدرستك <em>تجربة مميزة؟</em></h2>
+        <p>أرسل لنا فكرتها باختصار، وسيتواصل معك فريق <b>وحدة دعم التميز المدرسي</b> لدراستها وإضافتها إلى البنك وعرضها في اللقاءات القادمة.</p>
+        <ol class="shr-steps"><li><i>1</i><span>املأ النموذج في دقيقتين</span></li><li><i>2</i><span>نراجع الفكرة ونتواصل معك</span></li><li><i>3</i><span>تُعرض تجربتك في البنك</span></li></ol>
+        <div class="shr-q">من مدارسنا… <em>إلى مدارسنا</em></div>
+      </aside>
+      <form class="shr-f" id="shareForm" novalidate>
+        <div class="row2">
+          <label class="fld"><span>اسم المدرسة <b>*</b></span><input name="school" required maxlength="120" placeholder="مثال: الثانوية السادسة بالطائف"></label>
+          <label class="fld"><span>صاحب التجربة</span><input name="owner" maxlength="80" placeholder="الاسم (اختياري)"></label>
+        </div>
+        <div class="row2">
+          <label class="fld"><span>رقم الجوال <b>*</b></span><input name="phone" required inputmode="numeric" maxlength="10" placeholder="05XXXXXXXX" dir="ltr"></label>
+          <label class="fld"><span>عنوان التجربة</span><input name="title" maxlength="100" placeholder="اسم مختصر للتجربة (اختياري)"></label>
+        </div>
+        <div class="fld"><span>المرحلة</span><div class="chips" data-name="stage"><button type="button" data-v="ابتدائي">ابتدائي</button><button type="button" data-v="متوسط">متوسط</button><button type="button" data-v="ثانوي">ثانوي</button><button type="button" data-v="رياض أطفال">رياض أطفال</button></div></div>
+        <div class="fld"><span>المجال</span><div class="chips" data-name="domain" id="shDom"></div></div>
+        <label class="fld"><span>شرح مختصر للفكرة <b>*</b></span><textarea name="idea" required maxlength="600" rows="5" placeholder="ما المشكلة التي عالجتها التجربة؟ وما الفكرة؟ وما الأثر الذي لاحظتموه؟"></textarea><small class="cnt"><span id="ideaN">0</span> / 600</small></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label class="ok"><input type="checkbox" name="consent" required><span>أوافق على تواصل وحدة دعم التميز المدرسي معي بخصوص التجربة.</span></label>
+        <div class="err" id="shErr" role="alert"></div>
+        <button class="btn pri shr-btn" type="submit"><span class="t">أرسل التجربة</span><span class="sp"></span></button>
+        <div class="shr-done" id="shDone"><div class="ck"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></div><b>وصلتنا تجربتك، شكراً لك!</b><p>سيتواصل معك فريق وحدة دعم التميز المدرسي قريباً.</p><button type="button" class="btn gh" id="shAgain">إرسال تجربة أخرى</button></div>
+      </form>
+    </div>
   </div>
 </section>
 </main>
@@ -828,6 +902,29 @@ addEventListener('keydown',e=>{if(!$('#spl').classList.contains('on'))return;if(
  $('#splSnd').onclick=()=>{SPL.snd=!SPL.snd;$('#splSnd').textContent=SPL.snd?'🔊':'🔈';if(SPL.snd){a.currentTime=Math.min(SPL.t,a.duration-.05);if(SPL.play)a.play().catch(()=>{})}else a.pause()};SPL.snd=false})();
 let seen=false;try{seen=sessionStorage.getItem('splSeen')==='1'}catch(x){}
 if(!seen&&!location.hash)SPL.open();
+</script>
+<script>
+/* share form → Google Sheet (Apps Script web app) */
+const SHARE_URL='';
+(function(){const f=$('#shareForm');if(!f)return;
+ $('#shDom').innerHTML=Object.values(DOM).map(d=>`<button type="button" data-v="${d.n}">${d.n}</button>`).join('')+'<button type="button" data-v="أخرى">أخرى</button>';
+ const sel={stage:[],domain:[]};
+ f.querySelectorAll('.chips').forEach(c=>c.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;b.classList.toggle('on');const k=c.dataset.name,v=b.dataset.v;sel[k]=b.classList.contains('on')?[...sel[k],v]:sel[k].filter(x=>x!==v)}));
+ const idea=f.idea;idea.addEventListener('input',()=>$('#ideaN').textContent=idea.value.length);
+ f.phone.addEventListener('input',()=>{f.phone.value=f.phone.value.replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/\D/g,'').slice(0,10)});
+ const bad=(el,on)=>(el.closest('.fld')||el.closest('.ok')).classList.toggle('bad',on);
+ f.addEventListener('submit',async e=>{e.preventDefault();const er=$('#shErr');er.textContent='';
+  const ch=[[f.school,f.school.value.trim().length>=3,'اكتب اسم المدرسة.'],[f.phone,/^05\d{8}$/.test(f.phone.value),'رقم الجوال يجب أن يبدأ بـ 05 ويتكوّن من 10 أرقام.'],[f.idea,f.idea.value.trim().length>=20,'اكتب شرحاً مختصراً للفكرة (20 حرفاً على الأقل).'],[f.consent,f.consent.checked,'يلزم الموافقة على التواصل.']];
+  let msg='';ch.forEach(([el,ok,m])=>{bad(el,!ok);if(!ok&&!msg)msg=m});if(msg){er.textContent=msg;return}
+  if(f.website.value)return;
+  if(!SHARE_URL){er.textContent='النموذج قيد التفعيل، يرجى المحاولة لاحقاً.';return}
+  const btn=f.querySelector('.shr-btn');btn.classList.add('busy');btn.disabled=true;
+  const data=new URLSearchParams({school:f.school.value.trim(),owner:f.owner.value.trim(),phone:f.phone.value,title:f.title.value.trim(),stage:sel.stage.join('، '),domain:sel.domain.join('، '),idea:f.idea.value.trim(),page:location.href});
+  try{await fetch(SHARE_URL,{method:'POST',mode:'no-cors',body:data});f.classList.add('sent')}
+  catch(x){er.textContent='تعذّر الإرسال، تحقق من الاتصال وحاول مرة أخرى.'}
+  btn.classList.remove('busy');btn.disabled=false});
+ $('#shAgain').onclick=()=>{f.reset();sel.stage=[];sel.domain=[];f.querySelectorAll('.chips button.on').forEach(b=>b.classList.remove('on'));$('#ideaN').textContent=0;f.classList.remove('sent')};
+})();
 </script>
 </body>
 </html>
