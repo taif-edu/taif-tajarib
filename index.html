@@ -510,7 +510,7 @@ footer img{background:#fff;padding:8px 12px;border-radius:14px}
       <div class="org"><img class="hlogo" src="assets/moe-logo.png" alt="وزارة التعليم"><span class="vs"></span><div><b>الإدارة العامة للتعليم</b><b>بمحافظة الطائف</b><small>الشؤون التعليمية</small></div></div><span class="tag"><i></i> منصة توثيق ونشر الممارسات المتميزة</span>
       <h1 id="ht"><span class="w">بنك</span> <span class="w">التجارب</span> <span class="w">المميزة</span><br><span class="w">من</span> <span class="w"><em>مدارسنا</em></span></h1>
       <p class="lead">قصص نجاح ورحلات إبداع صنعتها مدارس تعليم الطائف؛ لكل تجربة فيديو تعريفي، وعرضها الكامل، وتوصيات قابلة للتطبيق في مدرستك.</p>
-      <div class="hprep">إعداد: <b>لجنة تنظيم اللقاءات – الشؤون التعليمية</b></div>
+      <div class="hprep">إعداد: <b>وحدة دعم التميز المدرسي – الشؤون التعليمية</b></div>
       <div class="cta">
         <a class="btn pri mag" href="#bank">استكشف التجارب ←</a>
         <button class="btn gh mag" onclick="SPL.open()">▶ فكرة البنك في دقيقة</button>
@@ -554,7 +554,7 @@ footer img{background:#fff;padding:8px 12px;border-radius:14px}
   </div>
 </section>
 </main>
-<footer><div class="wrap"><img src="assets/moe-logo.png" alt="وزارة التعليم" style="height:56px"><div style="margin-inline-end:auto"><b>الإدارة العامة للتعليم بمحافظة الطائف</b><div>وزارة التعليم · المملكة العربية السعودية</div><div class="prep">إعداد: <b>لجنة تنظيم اللقاءات – الشؤون التعليمية</b></div></div><div>www.moe.gov.sa</div></div></footer>
+<footer><div class="wrap"><img src="assets/moe-logo.png" alt="وزارة التعليم" style="height:56px"><div style="margin-inline-end:auto"><b>الإدارة العامة للتعليم بمحافظة الطائف</b><div>وزارة التعليم · المملكة العربية السعودية</div><div class="prep">إعداد: <b>وحدة دعم التميز المدرسي – الشؤون التعليمية</b></div></div><div>www.moe.gov.sa</div></div></footer>
 
 <div class="xp" id="xp" onclick="if(event.target===this)closeX()">
   <div class="xpw">
@@ -766,7 +766,7 @@ const V={
     else if(s.k==='nums')h=`<div class="scene sc-nums">${hd}<div class="row">${s.items.map((it,k)=>`<div class="bx a-pop" style="animation-delay:${.3+k*.35}s"><b data-v="${it.v}" data-f="${it.f||0}" data-s="${it.s||''}" data-p="${it.p||''}">0</b><span>${it.l.replace(/^٪\s*/,'')}</span></div>`).join('')}</div></div>`;
     else if(s.k==='ba'){const dual=s.dual,mx=Math.max(...s.items.flatMap(it=>dual?[it.b,it.a]:[it.v]))*1.15||1;
       h=`<div class="scene sc-ba">${hd}<div class="bars">${s.items.map((it,k)=>`<div class="br a-up" style="animation-delay:${.3+k*.3}s"><div class="bl">${it.l}</div><div class="tr">${dual?`<div class="bb b"><i data-w="${it.b/mx*100}"></i><s data-v="${it.b}">0</s></div><div class="bb a"><i data-w="${it.a/mx*100}"></i><s data-v="${it.a}">0</s></div>`:`<div class="bb ${k===s.items.length-1?'a':'b'}"><i data-w="${it.v/mx*100}"></i><s data-v="${it.v}">0</s></div>`}</div></div>`).join('')}</div>${dual?`<div class="lg"><span>${(s.legend||['قبل','بعد'])[0]}</span><span>${(s.legend||['قبل','بعد'])[1]}</span></div>`:''}</div>`}
-    else if(s.k==='end')h=`<div class="scene sc-end"><img src="assets/moe-logo-white.png" alt="" class="a-pop" style="height:120px;margin-bottom:26px"><div class="t1 a-up">${s.t}</div><div class="t2 a-up" style="animation-delay:.6s">${s.a}</div><div class="sig a-fade" style="animation-delay:1.3s">تجارب مميزة من مدارسنا · الإدارة العامة للتعليم بمحافظة الطائف</div><div class="sig a-fade" style="animation-delay:1.6s;margin-top:8px;font-size:15px;opacity:.8">إعداد: لجنة تنظيم اللقاءات – الشؤون التعليمية</div></div>`;
+    else if(s.k==='end')h=`<div class="scene sc-end"><img src="assets/moe-logo-white.png" alt="" class="a-pop" style="height:120px;margin-bottom:26px"><div class="t1 a-up">${s.t}</div><div class="t2 a-up" style="animation-delay:.6s">${s.a}</div><div class="sig a-fade" style="animation-delay:1.3s">تجارب مميزة من مدارسنا · الإدارة العامة للتعليم بمحافظة الطائف</div><div class="sig a-fade" style="animation-delay:1.6s;margin-top:8px;font-size:15px;opacity:.8">إعداد: وحدة دعم التميز المدرسي – الشؤون التعليمية</div></div>`;
     const st=$('#stage');st.innerHTML=`<div class="fr"><i></i><i></i><i></i><i></i></div><img class="brandm" src="assets/moe-logo-white.png" alt="">${h}<div class="foot">${e.s} · لوحة ${i+1} من ${N}</div>`;
     st.querySelectorAll('.bx b').forEach((b,k)=>{const v=+b.dataset.v,f=+b.dataset.f,sx=b.dataset.s,p=b.dataset.p,t0=performance.now()+300+k*350;
       (function step(now){const q=Math.max(0,Math.min(1,(now-t0)/1600)),ez=1-Math.pow(1-q,3);b.textContent=p+(v*ez).toLocaleString('en',{minimumFractionDigits:f,maximumFractionDigits:f})+sx;if(q<1)requestAnimationFrame(step)})(performance.now())});
@@ -801,7 +801,7 @@ const SPL={sc:[
   else if(s.k==='q')h=`<div class="scene sc-q has-il"><div class="qq">${acc(s.t).split(/(<em>.*?<\/em>|\s+)/).filter(x=>x&&x.trim()).map((w,k)=>`<span class="a-up" style="animation-delay:${k*.14}s">${w}</span>`).join('')}</div>${ill}</div>`;
   else if(s.k==='text')h=`<div class="scene sc-text has-il">${hd}${ill}<div class="body a-up" style="animation-delay:.5s">${acc(s.t)}</div></div>`;
   else if(s.k==='list')h=`<div class="scene sc-list">${hd}<div class="pn a-fade"><small>بنك التجارب المميزة</small>${s.items.map((it,k)=>`<div class="it a-r" style="background:${LCOL[k%6]};animation-delay:${.5+k*.7}s"><i>${k+1}</i>${it}</div>`).join('')}</div></div>`;
-  else h=`<div class="scene sc-end"><img src="assets/moe-logo-white.png" alt="" class="a-pop" style="height:110px;margin-bottom:22px"><div class="t1 a-up">من مدارسنا…</div><div class="t2 a-up" style="animation-delay:.6s">لمدارسنا</div><button class="spl-go a-up" style="animation-delay:1.3s" onclick="SPL.close()">ادخل إلى البنك ←</button><div class="sig a-fade" style="animation-delay:1.8s">إعداد: لجنة تنظيم اللقاءات – الشؤون التعليمية</div></div>`;
+  else h=`<div class="scene sc-end"><img src="assets/moe-logo-white.png" alt="" class="a-pop" style="height:110px;margin-bottom:22px"><div class="t1 a-up">من مدارسنا…</div><div class="t2 a-up" style="animation-delay:.6s">لمدارسنا</div><button class="spl-go a-up" style="animation-delay:1.3s" onclick="SPL.close()">ادخل إلى البنك ←</button><div class="sig a-fade" style="animation-delay:1.8s">إعداد: وحدة دعم التميز المدرسي – الشؤون التعليمية</div></div>`;
   $('#splStage').innerHTML=`<div class="fr"><i></i><i></i><i></i><i></i></div><img class="brandm" src="assets/moe-logo-white.png" alt="">${h}<div class="foot">بنك التجارب المميزة من مدارسنا · لوحة ${i+1} من ${N}</div>`;
   $('#splSeg').innerHTML=this.sc.map((x,k)=>`<i data-k="${k}"><b style="width:${k<i?100:0}%"></b></i>`).join('')},
  tick(now){if(!this.play)return;const dt=(now-this.last)/1000;this.last=now;
