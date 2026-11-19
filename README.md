@@ -4,4 +4,4 @@
 
 إعداد: لجنة تنظيم اللقاءات – الشؤون التعليمية
 
-الموقع: https://yaz2005yaz-collab.github.io/taif-tajarib
+الموقع: https://taif-edu.github.io/taif-tajarib
